@@ -15,7 +15,14 @@ if(have_posts()) {
                 <?php echo get_the_author_meta('display_name'); ?>
             </a>
         </div>
+        <div>
+            <?php the_excerpt() ?>
+        </div>
+        <a href="<?php echo the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+            Read more <span class="u-screen-reader-text">About <?php the_title(); ?></span>
+        </a>
     <?php }
+    the_posts_pagination();
  } else { ?>
     <p>Sorry, no posts matched your criteria.</p>
 <?php }
