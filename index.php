@@ -9,7 +9,7 @@ if(have_posts()) {
         <div>
             Posted on:
             <a href="<?php echo get_permalink(); ?>">
-                <time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('l, F j, Y'); ?></time>
+                <time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date(); ?></time>
             </a>
         </div>
     <?php }
