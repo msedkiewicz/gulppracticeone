@@ -16,7 +16,7 @@ if(have_posts()) {
     <?php }
     the_posts_pagination();
  } else { ?>
-    <p><?php echo __('Sorry, no posts matched your criteria.', 'gulppracticeone') ?></p>
+    <p><?php echo _e('Sorry, no posts matched your criteria.', 'gulppracticeone') ?></p>
 <?php }
 
 get_footer(); ?>
