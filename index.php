@@ -7,14 +7,12 @@ if(have_posts()) {
             <a href="<?php echo the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
         </h2>
         <div>
-            <?php blogpost_meta(); ?>
+            <?php gulpwp_meta_description(); ?>
         </div>
         <div>
             <?php the_excerpt(); ?>
         </div>
-        <a href="<?php echo the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-            Read more <span class="u-screen-reader-text">About <?php the_title(); ?></span>
-        </a>
+        <?php gulpwp_readmore(); ?>
     <?php }
     the_posts_pagination();
  } else { ?>
