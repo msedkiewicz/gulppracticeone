@@ -7,16 +7,10 @@ if(have_posts()) {
             <a href="<?php echo the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
         </h2>
         <div>
-            Posted on:
-            <a href="<?php echo get_permalink(); ?>">
-                <time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date(); ?></time>
-            </a>
-            By <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
-                <?php echo get_the_author_meta('display_name'); ?>
-            </a>
+            <?php blogpost_meta(); ?>
         </div>
         <div>
-            <?php the_excerpt() ?>
+            <?php the_excerpt(); ?>
         </div>
         <a href="<?php echo the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
             Read more <span class="u-screen-reader-text">About <?php the_title(); ?></span>
