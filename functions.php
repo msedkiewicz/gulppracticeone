@@ -12,7 +12,7 @@ function gulpwp_meta_description() {
 }
 
 function gulpwp_readmore() {
-    echo '<a href="' . get_the_permalink() . '" title="' . the_title_attribute() . '">';
+    echo '<a href="' . get_the_permalink() . '" title="' . the_title_attribute(['echo' => false]) . '">';
     echo 'Read more <span class="u-screen-reader-text">About ' . the_title() . '</span>';
     echo '</a>';
 }
