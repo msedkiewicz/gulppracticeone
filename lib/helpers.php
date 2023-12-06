@@ -4,11 +4,16 @@
 /* Functions with page / posts repeatable elements*/
 
 function gulpwp_meta_description() {
-    echo 'Posted on: ';
-    echo '<a href="' . esc_url(get_permalink()) .'">';
-    echo '<time datetime="' . esc_attr(get_the_date('c')) . '">' . esc_html(get_the_date()) . '</time>';
-    echo '</a> ';
-    echo 'By <a href="' . esc_url(get_author_posts_url(get_the_author_meta( 'ID' ))) . '">' . esc_html(get_the_author_meta('display_name')) . '</a>';
+
+    printf(
+        esc_html__( 'Posted on %s', 'gulppracticeone' ),
+        '<a href="' . esc_url(get_permalink()) .'"><time datetime="' . esc_attr(get_the_date('c')) . '">' . esc_html(get_the_date()) . '</time></a> '
+        );
+
+    printf(
+        esc_html( ' By %s', 'gulppracticeone' ),
+        '<a href="' . esc_url(get_author_posts_url(get_the_author_meta( 'ID' ))) . '">' . esc_html(get_the_author_meta('display_name')) . '</a>'
+        );
 }
 
 function gulpwp_readmore() {
