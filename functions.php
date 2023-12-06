@@ -4,13 +4,9 @@
 /* Functions with page / posts repeatable elements*/
 
 function blogpost_meta() {
-    ?>
-    Posted on:
-    <a href="<?php echo get_permalink(); ?>">
-        <time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date(); ?></time>
-    </a>
-    By <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>">
-        <?php echo get_the_author_meta('display_name'); ?>
-    </a>
-    <?php
+    echo 'Posted on:';
+    echo '<a href="' . get_permalink() .'">';
+    echo '<time datetime="' . get_the_date('c') . '">' . get_the_date() . '</time>';
+    echo '</a>';
+    echo 'By <a href="' . get_author_posts_url(get_the_author_meta( 'ID' )) . '">' . get_the_author_meta('display_name') . '</a>';
 }
