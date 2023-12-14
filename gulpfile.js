@@ -1,4 +1,4 @@
-const { series } = require("gulp");
+// const { series } = require("gulp");
 
 function defaultTask(cb) {
   // place code for your default task here
@@ -11,4 +11,6 @@ function wowTask(cb) {
   cb();
 }
 
-exports.default = series(defaultTask, wowTask);
+exports.defaultTask = defaultTask;
+exports.wowTask = wowTask;
+// exports.default = series(defaultTask, wowTask);
