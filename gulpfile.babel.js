@@ -1,8 +1,15 @@
 // const { series } = require("gulp");
+// const { yargs, argv } = require("yargs");
+
+const yargs = require("yargs/yargs");
+const { hideBin } = require("yargs/helpers");
+const argv = yargs(hideBin(process.argv)).argv;
+
+const PRODUCTION = yargs.argv.prod;
 
 function defaultTask(cb) {
   // place code for your default task here
-  console.log("It's working");
+  console.log(PRODUCTION);
   cb();
 }
 
