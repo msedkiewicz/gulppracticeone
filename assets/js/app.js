@@ -1,21 +1,24 @@
 // Require specific Bootstrap component JS.
-import 'bootstrap/js/src/toast'
-import 'bootstrap/js/src/carousel'
-import 'bootstrap/js/src/dropdown'
+import "bootstrap/js/src/toast";
+import "bootstrap/js/src/carousel";
+import "bootstrap/js/src/dropdown";
 
-const setupJS = function() {
-    // DOM is ready, add JS.
-    console.log('DOM ready');
+const setupJS = function () {
+  // DOM is ready, add JS.
+  console.log("DOM ready");
 
-    // Do something on each carousel slide change.
-    const carousel = document.getElementById('carouselExampleIndicators')
-    carousel.addEventListener('slide.bs.carousel', event => {
-        console.log('slide change');
-    })
+  // Do something on each carousel slide change.
+  const carousel = document.getElementById("carouselExampleIndicators");
+  carousel.addEventListener("slide.bs.carousel", (event) => {
+    console.log("slide change");
+  });
 };
 
-if (document.readyState === "complete" || (document.readyState !== "loading" && !document.documentElement.doScroll)) {
-    setupJS();
+if (
+  document.readyState === "complete" ||
+  (document.readyState !== "loading" && !document.documentElement.doScroll)
+) {
+  setupJS();
 } else {
-    document.addEventListener("DOMContentLoaded", setupJS);
+  document.addEventListener("DOMContentLoaded", setupJS);
 }
